@@ -1,6 +1,0 @@
-# Preface {-}
-
-These are some example lecture notes, designed to test out various
-systems for converting LaTeX notes to more accesible formats. The
-content is modified from the Wikipedia articles on the determinant
-[@Determinant] and variance [@Variance].
