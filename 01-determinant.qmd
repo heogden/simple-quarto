@@ -1,0 +1,115 @@
+# Determinants
+
+## Introduction
+
+In mathematics, the **determinant** is a scalar value that is a function
+of the entries of a square matrix. The determinant of a matrix is
+commonly denoted $\det(A)$, $\det A$, or $|A|$. Its value characterizes
+some properties of the matrix and the linear map represented by the
+matrix. In particular, the determinant is nonzero if and only if the
+matrix is invertible and the linear map represented by the matrix is an
+isomorphism. The determinant of a product of matrices is the product of
+their determinants.
+
+The determinant of a $2 \times 2$ matrix is
+$$\begin{vmatrix} a & b\\c & d \end{vmatrix}=ad-bc,$$ and the
+determinant of a $3 \times 3$ matrix is
+$$\begin{vmatrix} a & b & c \\ d & e & f \\ g & h & i \end{vmatrix}=
+aei + bfg + cdh - ceg - bdi - afh.$$
+
+The determinant of an matrix can be defined in several equivalent ways,
+the most common being Leibniz formula, which expresses the determinant
+as a sum of $n!$ (the factorial of $n$) signed products of matrix
+entries. It can be computed by the Laplace expansion, which expresses
+the determinant as a linear combination of determinants of submatrices,
+or with Gaussian elimination, which expresses the determinant as the
+product of the diagonal entries of a diagonal matrix that is obtained by
+a succession of elementary row operations.
+
+Determinants can also be defined by some of their properties. Namely,
+the determinant is the unique function defined on the matrices that has
+the four following properties:
+
+1.  The determinant of the identity matrix is $1$.
+
+2.  The exchange of two rows multiplies the determinant by $-1$.
+
+3.  Multiplying a row by a number multiplies the determinant by this
+    number.
+
+4.  Adding to a row a multiple of another row does not change the
+    determinant. 
+
+The above properties relating to rows (properties 2-4) may be replaced by the
+corresponding statements with respect to columns.
+
+Determinants occur throughout mathematics. For example, a matrix is
+often used to represent the coefficients in a system of linear
+equations, and determinants can be used to solve these equations
+(Cramer's rule), although other methods of solution are computationally
+much more efficient. Determinants are used for defining the
+characteristic polynomial of a matrix, whose roots are the eigenvalues.
+In geometry, the signed $n$-dimensional volume of a $n$-dimensional
+parallelepiped is expressed by a determinant, and the determinant of
+(the matrix of) a linear transformation determines how the orientation
+and the $n$-dimensional volume are transformed. This is used in calculus
+with exterior differential forms and the Jacobian determinant, in
+particular for changes of variables in multiple integrals.
+
+## Two by two matrices
+
+The determinant of a matrix
+$$\begin{pmatrix} a & b \\c & d \end{pmatrix}$$ {#eq-2by2}
+is denoted either by "det" or by vertical bars
+around the matrix, and is defined as
+$$\det \begin{pmatrix} a & b \\c & d \end{pmatrix} = \begin{vmatrix} a & b \\c & d \end{vmatrix} = ad - bc.$$
+For example,
+$$\det \begin{pmatrix} 3 & 7 \\1 & -4 \end{pmatrix} = \begin{vmatrix} 3 & 7 \\ 1 & {-4} \end{vmatrix} = (3 \cdot (-4)) - (7 \cdot 1) = -19.$$
+
+### First properties
+
+The determinant has several key properties that can be proved by direct
+evaluation of the definition for $2 \times 2$-matrices, and that
+continue to hold for determinants of larger matrices. They are as
+follows: first, the determinant of the identity matrix
+$\begin{pmatrix}1 & 0 \\ 0 & 1 \end{pmatrix}$ is 1. Second, the
+determinant is zero if two rows are the same:
+$$\begin{vmatrix} a & b \\ a & b \end{vmatrix} = ab - ba = 0.$$ This
+holds similarly if the two columns are the same. Moreover,
+$$\begin{vmatrix} a & b + b' \\ c & d + d' \end{vmatrix} = a(d+d')-(b+b')c = \begin{vmatrix}a & b\\ c & d \end{vmatrix} + \begin{vmatrix}a & b' \\ c & d' \end{vmatrix}.$$
+Finally, if any column is multiplied by some number $r$ (i.e., all
+entries in that column are multiplied by that number), the determinant
+is also multiplied by that number:
+$$\begin{vmatrix} r \cdot a & b \\ r \cdot c & d \end{vmatrix} = rad - brc = r(ad-bc) = r \cdot \begin{vmatrix} a & b \\c & d \end{vmatrix}.$$
+
+## Geometric meaning
+
+![The area of the parallelogram is the
+absolute value of the determinant of the matrix formed by the vectors
+representing the parallelogram's
+sides.](Area_parallellogram_as_determinant.png){#fig-geo width="50%"}
+
+If the matrix entries are real numbers, the matrix $A$ can be used to
+represent two linear maps: one that maps the standard basis vectors to
+the rows of $A$, and one that maps them to the columns of $A$. In either
+case, the images of the basis vectors form a parallelogram that
+represents the image of the unit square under the mapping. The
+parallelogram defined by the rows of the matrix
+@eq-2by2 is
+the one with vertices at $(0, 0)$, $(a, b)$, $(a+c, b+d)$, and $(c, d)$,
+as shown in @fig-geo.
+
+The absolute value of $ad - bc$ is the area of the parallelogram, and
+thus represents the scale factor by which areas are transformed by $A$.
+(The parallelogram formed by the columns of $A$ is in general a
+different parallelogram, but since the determinant is symmetric with
+respect to rows and columns, the area will be the same.)
+
+The absolute value of the determinant together with the sign becomes the
+*oriented area* of the parallelogram. The oriented area is the same as
+the usual area, except that it is negative when the angle from the first
+to the second vector defining the parallelogram turns in a clockwise
+direction (which is opposite to the direction one would get for the
+identity matrix.
+
+\[Original Wikipedia article continues...\]
