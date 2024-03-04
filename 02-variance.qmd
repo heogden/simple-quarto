@@ -114,7 +114,7 @@ $$\operatorname{Var}(X)\ge 0.$$
 
 ::: proof
 Since $(X - \mu)^2 \geq 0$,
-$$\operatorname{Var}(X) = \operatorname{E}\left[(X - \mu)^2\right] \geq 0.$$ ◻
+$$\operatorname{Var}(X) = \operatorname{E}\left[(X - \mu)^2\right] \geq 0.$$
 :::
 
 \[Original Wikipedia article continues ...\]
